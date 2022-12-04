@@ -35,7 +35,3 @@ with open("04.txt", "r") as file:
 	file.close()
 
 print(amount)
-
-4-5, 1-2
-
-1-2, 4-5
