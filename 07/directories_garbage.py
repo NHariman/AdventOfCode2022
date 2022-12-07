@@ -58,11 +58,13 @@ for directory in directories:
 		size_answer += directory['size']
 	elif (len(directory['sub_dirs'])):
 		size = 0
-		for item in directories:
-			if (item['directory_name'] == directory['directory_name']):
-				size += item['size']
-				break
-		
+		for name in directory['sub_dirs']:
+			for item in directories:
+				if (item['directory_name'] == name):
+					size += item['size']
+					break
+		if (size <= 100000):
+			size_answer += size
 
 
 
